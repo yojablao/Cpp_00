@@ -6,7 +6,7 @@
 #    By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/17 05:43:38 by yojablao          #+#    #+#              #
-#    Updated: 2025/03/17 05:44:12 by yojablao         ###   ########.fr        #
+#    Updated: 2025/03/17 06:22:34 by yojablao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ $(NAME): $(obj)
 	$(CC) $(Cflag) $(obj) -o $(NAME)
 
 clean :
-	rm -f $(OBJ)
+	rm -f $(obj)
 
 fclean: clean
 	rm -rf $(NAME)
