@@ -6,11 +6,12 @@
 /*   By: yojablao <yojablao@student.42.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 02:58:46 by yojablao          #+#    #+#             */
-/*   Updated: 2025/03/13 03:25:19 by yojablao         ###   ########.fr       */
+/*   Updated: 2025/03/17 05:53:09 by yojablao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.hpp"
+
 
 int main(void)
 {
@@ -19,13 +20,18 @@ int main(void)
 
     while(1)
     {
-        std::getline(std::cin,buffer);
-        // if (buffer.empty()) continue;
+        std::cout << "-»> ";
+        if (!std::getline(std::cin, buffer)) { 
+            std::cout<< "\nExiting...]" << std::endl;
+            break;
+        }
+        if (buffer.empty())
+            std::cout << "is null\n";
         if(buffer == "ADD")
             phone.add();
-        else if (buffer == "EXIT")
-            exit(0);
         else if (buffer == "SEARCH")
             phone.search();
+        else if (buffer == "EXIT")
+            exit(0);
     }
-}
+} 
